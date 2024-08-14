@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zoogVPN | sau_baka的博客</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
+    <style>#loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: rgb(140, 140, 246);
+        z-index: 9999;
+        transition: width 0.4s ease;
+        animation: loader-animation 2s linear infinite;
+    }
+    
+    /* 加载条动画 */
+    @keyframes loader-animation {
+        0% {
+            width: 0;
+        }
+        50% {
+            width: 50%;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+    
+    /* 只有在加载完成后隐藏加载条 */
+    body.loaded #loader {
+        width: 0;
+        visibility: hidden;
+        animation: none; /* 移除动画效果 */
+    }</style>
+</head>
+<body>
+    <div id="loader"></div>
+    <div class="background">
+        <div class="overlay">
+            <header>
+                <h1>sau_baka的博客</h1>
+                <nav>
+                    <ul>
+                        <li><a href="../../../../index.html">首页</a></li>
+                        <li><a href="../../../aboutme/index.html">关于我</a></li>
+                        <li><a href="../../../articlelist/index.html">文章</a></li>
+                        <li><a href="../../index.html">资源</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section id="resource-detail">
+                    <h2>zoogVPN</h2>
+                    <p>这是一个可供中国人使用的VPN！</p>
+                    <p></p>
+                    <p>更多信息和下载链接可以放在这里：</p>
+                    <ul>
+                        <li><a href="../ZoogVPN/ZoogVPN.exe" target="_blank">下载!</a></li>
+                        <li><a href="https://zoogvpn.com/zh-cn/" target="_blank">官方地址!</a></li>
+                    </ul>
+                </section>
+            </main>
+            <footer>
+                <p>&copy; 2024 sau_baka的博客. 版权所有.</p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        // 当页面完全加载时隐藏加载条
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

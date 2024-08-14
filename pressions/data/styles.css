@@ -1,0 +1,150 @@
+/* styles.css */
+
+/* 继承原有样式 */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* 防止页面滚动 */
+}
+
+.background {
+    position: relative;
+    height: 100vh;
+    background: url('../../data/background.webp') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(0.55px);
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* 半透明黑色遮罩 */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.5s; /* 遮罩层淡入淡出效果 */
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+#resources {
+    max-width: 1200px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5); /* 背景颜色略深 */
+    padding: 20px;
+    border-radius: 8px; /* 圆角效果 */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    display: block;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.grid-item:hover img {
+    transform: scale(1.05);
+}
+
+.grid-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* 响应式设计 - 手机适配 */
+
+/* 当屏幕宽度小于768px时应用 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    #resources {
+        padding: 15px;
+    }
+}
+
+/* 当屏幕宽度小于480px时应用 */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+    }
+
+    .grid-item p {
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 15px;
+    }
+}

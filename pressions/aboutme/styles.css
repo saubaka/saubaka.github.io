@@ -1,0 +1,109 @@
+/* styles.css */
+
+/* 继承原有样式 */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* 防止页面滚动 */
+}
+
+.background {
+    position: relative;
+    height: 100vh;
+    background: url('../../data/background.webp') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(0.55px);
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* 半透明黑色遮罩 */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.5s; /* 遮罩层淡入淡出效果 */
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+#about-me {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5); /* 背景颜色略深 */
+    padding: 20px;
+    border-radius: 8px; /* 圆角效果 */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-info li {
+    margin-bottom: 10px;
+}
+
+.profile-info a {
+    color: #00f;
+    text-decoration: none;
+}
+
+.profile-info a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+}

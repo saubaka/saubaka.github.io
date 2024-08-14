@@ -1,0 +1,123 @@
+/* styles.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    position: relative;
+    height: 100vh;
+    background: url('./data/background.webp') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(0.55px);
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* 半透明黑色遮罩 */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    #about-me {
+        padding: 15px;
+    }
+}
+
+/* 当屏幕宽度小于480px时应用 */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-info ul li {
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 15px;
+    }
+}
