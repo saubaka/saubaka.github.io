@@ -13,7 +13,7 @@ body, html {
     background: url('./data/background.webp') no-repeat center center fixed;
     background-size: cover;
     filter: blur(0.55px);
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .overlay {
