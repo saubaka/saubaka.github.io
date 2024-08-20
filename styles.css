@@ -78,7 +78,7 @@ section {
     -webkit-backdrop-filter: blur(10px); /* 兼容 WebKit 浏览器 */
     background: rgba(255, 255, 255, 0.3); /* 半透明背景 */
 }
-@media (max-width: 768px) {
+@media (max-width: 1440px) {
     header h1 {
         font-size: 2em;
     }
