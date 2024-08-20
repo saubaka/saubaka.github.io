@@ -107,6 +107,19 @@ main {
     padding: 20px;
     background: rgba(0, 0, 0, 0.6);
 }*/
+@keyframes popup {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 .blurred-text {
     position: relative;
     padding: 20px;
@@ -117,4 +130,8 @@ main {
     backdrop-filter: blur(10px); /* 应用高斯模糊效果 */
     -webkit-backdrop-filter: blur(10px); /* 兼容 WebKit 浏览器 */
     background: rgba(255, 255, 255, 0.3); /* 半透明背景 */
+    animation: popup 0.5s ease-out forwards;
+}
+.blurred-text {
+    animation: popup 0.5s ease-out forwards;
 }
