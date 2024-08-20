@@ -107,8 +107,8 @@ section {
     }
 }
 
-/* 当屏幕宽度小于480px时应用 */
-@media (max-width: 1440px) {
+/* 当屏幕宽度小于1080px时应用 */
+@media (max-width: 1080px) {
     header h1 {
         font-size: 1.5em;
     }
