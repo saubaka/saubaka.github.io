@@ -8,31 +8,56 @@
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <div id="overlay"></div>
+    <div id="popup">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <h>提示</h>
+        <p>资源多为“系统工具”，如点击下载即表示您对使用这些资源导致的所有问题负责。另外，所有资源并不会保证在中国大陆的合法性，使用这些资源引起的所有法律责任由使用者自行承担，该博客不为此负任何责任！</p>
+
+            <label>
+                <input type="checkbox" id="no-show-again"> 不再显示此界面
+            </label>
+        </p>
+    </div>
+    <script>
+        window.onload = function() {
+            if (!localStorage.getItem('noShowPopup')) {
+                document.getElementById('overlay').style.display = 'block';
+                document.getElementById('popup').style.display = 'block';
+            }
+        }
+        function closePopup() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+            if (document.getElementById('no-show-again').checked) {
+                localStorage.setItem('noShowPopup', 'true');
+            }
+        }
+    </script>
     <div class="background">
-        <div class="overlay">
-            <header>
-                <div class="blurred-text"><h1>sau_baka的博客</h1></div>
-                <nav>
-                    <ul>
-                        <div class="blurred-text"><li><a href="../../index.html">首页</a></li>
-                        <li><a href="../aboutme/index.html">关于我</a></li>
-                        <li><a href="../articlelist/index.html">文章</a></li></div>
-                    </ul>
-                </nav>
-            </header>
-            <main>
-                <div class="blurred-text">
-                    <h2>资源</h2>
-                    <div class="grid-container">
-                        <a href="./data/ZoogVPN/index.html" class="grid-item">
-                            <img src="./data/ZoogVPN/zoogvpn.png" alt="zoogVPN" sizes="16x16">
-                            <p>zoogVPN</p>
-                    </div>
-                </section>
-            </main>
-            <footer>
-                <div class="blurred-text"><p>&copy; 2024 sau_baka. 版权所有.</p></div>
-            </footer>
+        <header>
+            <div class="blurred-text"><h1>sau_baka的博客</h1></div>
+            <nav>
+                <ul>
+                    <div class="blurred-text"><li><a href="../../index.html">首页</a></li>
+                    <li><a href="../aboutme/index.html">关于我</a></li>
+                    <li><a href="../articlelist/index.html">文章</a></li></div>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="blurred-text">
+                <h2>资源</h2>
+                <div class="grid-container">
+                    <a href="./data/ZoogVPN/index.html" class="grid-item">
+                        <img src="./data/ZoogVPN/zoogvpn.png" alt="zoogVPN" sizes="16x16">
+                        <p>zoogVPN</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="blurred-text"><p>&copy; 2024 sau_baka. 版权所有.</p></div>
+        </footer>
         </div>
     </div>
 </body>
