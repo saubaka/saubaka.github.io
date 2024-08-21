@@ -61,12 +61,6 @@ main {
 section {
     margin-bottom: 40px;
 }
-
-/*footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-}*/
 @keyframes popup {
     0% {
         transform: scale(0.5);
@@ -87,9 +81,9 @@ section {
     color: white;
     font-size: 24px;
     text-align: center;
-    backdrop-filter: blur(10px); /* 应用高斯模糊效果 */
-    -webkit-backdrop-filter: blur(10px); /* 兼容 WebKit 浏览器 */
-    background: rgba(255, 255, 255, 0.3); /* 半透明背景 */
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    background: rgba(255, 255, 255, 0.3); 
     animation: popup 0.5s ease-out forwards;
 }
 .blurred-text {
@@ -124,7 +118,6 @@ section {
     }
 }
 
-/* 当屏幕宽度小于1080px时应用 */
 @media (max-width: 1080px) {
     header h1 {
         font-size: 1.5em;

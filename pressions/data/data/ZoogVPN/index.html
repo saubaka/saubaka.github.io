@@ -6,37 +6,6 @@
     <title>zoogVPN | sau_baka的博客</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
-    <style>#loader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 5px;
-        background: rgb(140, 140, 246);
-        z-index: 9999;
-        transition: width 0.4s ease;
-        animation: loader-animation 2s linear infinite;
-    }
-    
-    /* 加载条动画 */
-    @keyframes loader-animation {
-        0% {
-            width: 0;
-        }
-        50% {
-            width: 50%;
-        }
-        100% {
-            width: 100%;
-        }
-    }
-    
-    /* 只有在加载完成后隐藏加载条 */
-    body.loaded #loader {
-        width: 0;
-        visibility: hidden;
-        animation: none; /* 移除动画效果 */
-    }</style>
 </head>
 <body>
     <div id="loader"></div>
@@ -70,11 +39,5 @@
             </footer>
         </div>
     </div>
-    <script>
-        // 当页面完全加载时隐藏加载条
-        window.addEventListener('load', () => {
-            document.body.classList.add('loaded');
-        });
-    </script>
 </body>
 </html>

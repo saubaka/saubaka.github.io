@@ -1,13 +1,9 @@
-/* styles.css */
-
-/* 继承原有样式 */
-
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
-    overflow: scroll; /* 防止页面滚动 */
+    overflow: scroll; 
 }
 
 .background {
@@ -18,20 +14,6 @@ body, html {
     filter: blur(0.55px);
     overflow: scroll;
 }
-
-/*.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); 
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    transition: background 0.5s;  遮罩层淡入淡出效果 
-}*/
-
 header {
     padding: 20px;
     text-align: center;
@@ -62,15 +44,6 @@ main {
     flex: 1;
     padding: 20px;
 }
-
-/*#resources {
-    max-width: 1200px;
-    margin: auto;
-    background: rgba(0, 0, 0, 0.5); /* 背景颜色略深 
-    padding: 20px;
-    border-radius: 8px; /* 圆角效果 
-}*/
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -100,12 +73,6 @@ main {
     margin-top: 10px;
     font-size: 1.2em;
 }
-
-/*footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-}*/
 @keyframes popup {
     0% {
         transform: scale(0.5);
@@ -126,17 +93,14 @@ main {
     color: white;
     font-size: 24px;
     text-align: center;
-    backdrop-filter: blur(10px); /* 应用高斯模糊效果 */
-    -webkit-backdrop-filter: blur(10px); /* 兼容 WebKit 浏览器 */
-    background: rgba(255, 255, 255, 0.3); /* 半透明背景 */
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.3); 
     animation: popup 0.5s ease-out forwards;
     .blurred-text {
         animation: popup 0.5s ease-out forwards;
     }
 }
-/* 响应式设计 - 手机适配 */
-
-/* 当屏幕宽度小于768px时应用 */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
@@ -155,8 +119,6 @@ main {
         padding: 15px;
     }
 }
-
-/* 当屏幕宽度小于480px时应用 */
 @media (max-width: 480px) {
     header h1 {
         font-size: 1.5em;
@@ -175,8 +137,6 @@ main {
         padding: 15px;
     }
 }
-/* 资源页面专用样式 */
-
 .resource-image {
     width: 100%;
     height: auto;
@@ -200,35 +160,4 @@ main {
 
 #resource-detail a:hover {
     text-decoration: underline;
-}
-#loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: rgb(140, 140, 246);
-    z-index: 9999;
-    transition: width 0.4s ease;
-    animation: loader-animation 2s linear infinite;
-}
-
-/* 加载条动画 */
-@keyframes loader-animation {
-    0% {
-        width: 0;
-    }
-    50% {
-        width: 50%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-/* 只有在加载完成后隐藏加载条 */
-body.loaded #loader {
-    width: 0;
-    visibility: hidden;
-    animation: none; /* 移除动画效果 */
 }

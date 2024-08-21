@@ -1,15 +1,10 @@
-/* styles.css */
-
-/* 继承原有样式 */
-
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
-    overflow: scroll; /* 防止页面滚动 */
+    overflow: scroll; 
 }
-
 .background {
     position: relative;
     height: 100vh;
@@ -18,20 +13,6 @@ body, html {
     filter: blur(0.55px);
     overflow: scroll;
 }
-
-/*.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);  半透明黑色遮罩 
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    transition: background 0.5s;  遮罩层淡入淡出效果 
-}*/
-
 header {
     padding: 20px;
     text-align: center;
@@ -51,41 +32,23 @@ nav ul li {
     display: inline;
     margin: 0 15px;
 }
-
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
 }
-
 main {
     flex: 1;
     padding: 20px;
 }
-
-/*article {
-    max-width: 800px;
-    margin: auto;
-    background: rgba(0, 0, 0, 0.5); 文章背景略深 
-    padding: 20px;
-    border-radius: 8px; /* 圆角效果 
-}*/
-
 article h2 {
     margin-top: 0;
     font-size: 2em;
 }
-
 article h3 {
     font-size: 1.5em;
     margin-top: 20px;
 }
-
-/*footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-}*/
 @keyframes popup {
     0% {
         transform: scale(0.5);
@@ -106,9 +69,9 @@ article h3 {
     color: white;
     font-size: 24px;
     text-align: center;
-    backdrop-filter: blur(10px); /* 应用高斯模糊效果 */
-    -webkit-backdrop-filter: blur(10px); /* 兼容 WebKit 浏览器 */
-    background: rgba(255, 255, 255, 0.3); /* 半透明背景 */
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.3); 
     animation: popup 0.5s ease-out forwards;
 }
 .blurred-text {
@@ -142,8 +105,6 @@ article h3 {
         padding: 15px;
     }
 }
-
-/* 当屏幕宽度小于480px时应用 */
 @media (max-width: 480px) {
     header h1 {
         font-size: 1.5em;
