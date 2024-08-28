@@ -1,0 +1,101 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: scroll; 
+}
+.background {
+    position: relative;
+    height: 100vh;
+    background: url('../../data/background.webp') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(0.55px);
+    overflow: scroll;
+}
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+main {
+    flex: 1;
+    padding: 20px;
+}
+#about-me {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 8px; 
+}
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+.profile-info li {
+    margin-bottom: 10px;
+}
+.profile-info a {
+    color: #00f;
+    text-decoration: none;
+}
+.profile-info a:hover {
+    text-decoration: underline;
+}
+@keyframes popup {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.blurred-text {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    background: rgba(255, 255, 255, 0.3); 
+    animation: popup 0.5s ease-out forwards;
+}
+.blurred-text {
+    animation: popup 0.5s ease-out forwards;
+}
