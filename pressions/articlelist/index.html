@@ -4,49 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>博客文章列表 | sau_baka的博客</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../styles.css">
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div class="background">
         <div class="overlay">
-            <header>
-                <div class="blurred-text"><h1>sau_baka的博客</h1></div>
-                <nav>
-                    <ul>
-                        <div class="blurred-text"><li><a href="../../index.html">首页</a></li>
-                        <li><a href="../../pressions/aboutme/index.html">关于我</a></li>
-                        <li><a href="../commented/index.html">意见反馈</a></li>
-                        <li><a href="https://www.saubaka.top">主站</a></li></div>
-                    </ul>
-                </nav>
-            </header>
-            <main>
-                <div class="blurred-text">
-                    <h2>  博客文章列表</h2>
-                    <ul class="article-list">
-                        <li>
-                            <h3><a href="../../article/2024,8,20/index.html">关于资源</a></h3>
-                            <p>发表日期：2024年8月26日</p>
-                            <p>关于资源的一些问题</p>
-                            <p><a href="../../article/2024,8,26/index.html">点击预览全文...</a></p>
-                        </li>
-                        <li>
-                            <h3><a href="../../article/2024,8,20/index.html">UI!</a></h3>
-                            <p>发表日期：2024年8月20日</p>
-                            <p>UI的1.0.0版本已基本确定</p>
-                            <p><a href="../../article/2024,8,20/index.html">点击预览全文...</a></p>
-                        </li>
-                        <li>
-                            <h3><a href="../../article/2024,8,14/index.html">HI</a></h3>
-                            <p>发表日期：2024年8月14日</p>
-                            <p>初次界面!</p>
-                            <p><a href="../../article/2024,8,14/index.html">点击预览全文...</a></p>
-                        </li>
-                    </ul>
-                </section>
-            </main>
+            <button id="menuButton">☰</button>
+            <div id="sidebar">
+                <a href="../../index.html">首页</a>
+                <a href="../../pressions/aboutme/index.html">关于我</a>
+                <a href="../commented/index.html">意见反馈</a>
+                <a href="https://www.saubaka.top">主站</a>
+            </div>
+            <div id="mainContent">
+                <header>
+                    <div class="blurred-text"><h1>sau_baka的博客</h1></div>
+                </header>
+                <main>
+                    <div class="blurred-text">
+                        <h2>  博客文章列表</h2>
+                        <ul class="article-list">
+                            <li>
+                                <h3><a href="../../article/2024,8,26/index.html">关于资源</a></h3>
+                                <p>发表日期：2024年8月26日</p>
+                                <p>关于资源的一些问题</p>
+                                <p><a href="../../article/2024,8,26/index.html">点击预览全文...</a></p>
+                            </li>
+                            <li>
+                                <h3><a href="../../article/2024,8,20/index.html">UI!</a></h3>
+                                <p>发表日期：2024年8月20日</p>
+                                <p>UI的1.0.0版本已基本确定</p>
+                                <p><a href="../../article/2024,8,20/index.html">点击预览全文...</a></p>
+                            </li>
+                            <li>
+                                <h3><a href="../../article/2024,8,14/index.html">HI</a></h3>
+                                <p>发表日期：2024年8月14日</p>
+                                <p>初次界面!</p>
+                                <p><a href="../../article/2024,8,14/index.html">点击预览全文...</a></p>
+                            </li>
+                        </ul>
+                    </section>
+                </main>
+            </div>
+    <script src="../../script.js"></script>
             <footer>
                 <div class="blurred-text"><p>&copy; 2024 sau_baka. 版权所有.</p></div>
             </footer>

@@ -4,43 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>意见反馈 | sau_baka的博客</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../styles.css">
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="background">
         <div class="overlay">
-            <header>
-                <div class="blurred-text"><h1>sau_baka的博客</h1></div>
-                <nav>
-                    <ul>
-                        <div class="blurred-text"><li><a href="../../index.html">首页</a></li>
-                        <li><a href="../../pressions/aboutme/index.html">关于我</a></li>
-                        <li><a href="../../pressions/articlelist/index.html">文章</a></li>
-                        <li><a href="https://www.saubaka.top">主站</a></li></div> 
-                    </ul>
-                </nav>
-            </header>
-            <main>
-                <div class="blurred-text">
-                    <h2>评论区</h2>
-                    <p>这是一个在线评论区，您可以通过登录自己的Github账号来进行评论</p>
-                    <p>您可以在此提出相关的建议或合作需求</p>
-                    <h3>Tips:</h3>
-                    <p>通过"Log"来进行登录</p>
-                    <p>通过"Comment"来进行发送反馈</p>
-                    <p>所有人都可以查看反馈，引用反馈，但不能对之修改(除管理员)</p>
-                    </div>
-                <section id="txt">
-                    <script src="https://utteranc.es/client.js"
-                        repo="saubaka/sautxt"
-                        issue-term="意见反馈"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
-                    </script>    
-                </section>
-            </main>
+            <button id="menuButton">☰</button>
+            <div id="sidebar">
+                <a href="../../index.html">首页</a>
+                <a href="../../pressions/aboutme/index.html">关于我</a>
+                <a href="../../pressions/articlelist/index.html">文章</a>
+                <a href="https://www.saubaka.top">主站</a>
+            </div>
+            <div id="mainContent">
+                <header>
+                    <div class="blurred-text"><h1>sau_baka的博客</h1></div>
+                </header>
+                <main>
+                    <div class="blurred-text">
+                        <h2>评论区</h2>
+                        <p>这是一个在线评论区，您可以通过登录自己的Github账号来进行评论</p>
+                        <p>您可以在此提出相关的建议或合作需求</p>
+                        <h3>Tips:</h3>
+                        <p>通过"Log"来进行登录</p>
+                        <p>通过"Comment"来进行发送反馈</p>
+                        <p>所有人都可以查看反馈，引用反馈，但不能对之修改(除管理员)</p>
+                        </div>
+                    <section id="txt">
+                        <script src="https://utteranc.es/client.js"
+                            repo="saubaka/sautxt"
+                            issue-term="意见反馈"
+                            theme="github-light"
+                            crossorigin="anonymous"
+                            async>
+                        </script>    
+                    </section>
+                </main>
+            </div>
+    <script src="../../script.js"></script>
             <footer>
                 <div class="blurred-text"><p>&copy; 2024 sau_baka. 版权所有.</p></div>
             </footer>

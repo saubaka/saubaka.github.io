@@ -1,12 +1,76 @@
-/* styles.css */
-
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
-
+#menuButton {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 18px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.3); 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+    backdrop-filter: blur(10px); 
+    z-index: 1000; 
+}
+#menuButton:hover {
+    background-color: rgba(255, 255, 255, 0.688); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+    transform: scale(1.05); 
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 1000px;
+    transition: left 0.3s; 
+    z-index: 999; 
+    padding: 17px;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    background: rgba(255, 255, 255, 0.3); 
+    animation: popup 0.5s ease-out forwards;
+}
+#sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+#sidebar a:hover {
+    filter: blur(1px); 
+    border-radius: 10px;
+    transition: filter 0.3s ease, box-shadow 0.3s ease; 
+    background: rgba(255, 255, 255, 0.3); 
+}
+.active {
+    filter: blur(1px); 
+    border-radius: 10px;
+    transition: filter 0.3s ease, box-shadow 0.3s ease; 
+    background: rgba(255, 255, 255, 0.3); 
+}
+#mainContent {
+    margin-left: 0;
+    transition: margin-left 0.3s; 
+    padding: 15px;
+}
 .background {
     position: relative;
     height: 100vh;
@@ -15,7 +79,6 @@ body, html {
     filter: blur(0.5px);
     overflow: scroll;
 }
-
 .overlay {
     position: absolute;
     top: 0;
@@ -26,38 +89,31 @@ body, html {
     display: flex;
     flex-direction: column;
 }
-
 header {
     padding: 20px;
     text-align: center;
 }
-
 header h1 {
     margin: 0;
     font-size: 2.5em;
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
 }
-
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
-
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
 }
-
 main {
     flex: 1;
     padding: 20px;
 }
-
 section {
     margin-bottom: 40px;
 }
@@ -86,59 +142,50 @@ section {
     background: rgba(255, 255, 255, 0.3); 
     animation: popup 0.5s ease-out forwards;
 }
-.blurred-text {
-    animation: popup 0.5s ease-out forwards;
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-position: center;
 }
-@media (max-width: 1440px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 1em;
-    }
-
-    .profile {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .profile-pic {
-        width: 120px;
-        height: 120px;
-    }
-
-    #about-me {
-        padding: 15px;
-    }
+.profile-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+.profile-info li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.profile-info a {
+    color: rgb(193, 193, 225);
+    text-decoration: none;
+}
+.profile-info a:hover {
+    text-decoration: underline;
+    text-align: center;
+}
+article-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.article-list h3 {
+    margin-top: 0;
+    font-size: 1.8em;
 }
 
-@media (max-width: 1080px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    nav ul li a {
-        font-size: 0.9em;
-    }
-
-    .profile-pic {
-        width: 100px;
-        height: 100px;
-    }
-
-    .profile-info ul li {
-        font-size: 0.9em;
-    }
-
-    footer {
-        font-size: 0.8em;
-        padding: 15px;
-    }
-    
+.article-list a {
+    color: #fff;
+    text-decoration: none;
+}
+.article-list p {
+    margin: 5px 0;
+}
+article h2 {
+    margin-top: 0;
+    font-size: 2em;
+}
+article h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
 }
