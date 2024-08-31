@@ -14,3 +14,13 @@ menuButton.addEventListener('click', function() {
     }
     isSidebarOpen = !isSidebarOpen;
 });
+const currentPage = window.location.pathname.split('/').pop(); 
+const menuLinks = document.querySelectorAll('#sidebar a');
+menuLinks.forEach(link => {
+    const linkHref = link.getAttribute('href').split('/').pop(); 
+    if (linkHref === currentPage) {
+        link.classList.add('active'); 
+    } else {
+        link.classList.remove('active'); 
+    }
+});

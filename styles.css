@@ -189,3 +189,27 @@ article h3 {
     font-size: 1.5em;
     margin-top: 20px;
 }
+.image-wall {
+    display: grid;
+    grid-gap: 2px; /* 容器之间的空隙非常小 */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* 自适应列宽 */
+    width: 90%;
+    max-width: 1200px; /* 图片墙的最大宽度 */
+}
+.image-container {
+    overflow: hidden;
+    position: relative;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持图片比例 */
+    display: block;
+}
+/* 不同大小的容器样式 */
+.image-container.wide {
+    grid-column: span 2; /* 宽度占2列 */
+}
+.image-container.tall {
+    grid-row: span 2; /* 高度占2行 */
+}
